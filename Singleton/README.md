@@ -25,7 +25,6 @@ public class SingletonExample {
 - 饿汉式
 
 > 延时加载，资源利用率高
->
 > 每次获取实例都要同步，并发效率低
 
 ```Java
@@ -45,9 +44,7 @@ public class SingletonExample {
 - 双重检测锁
 
 > 懒汉式 + 双重检测锁
->
 > 由于编译器优化和JVM内部模型原因，偶尔会出现问题，不建议使用
->
 > 可通过volatile关键字禁止指令重排实现线程安全
 
 ```Java
@@ -83,8 +80,9 @@ public class SingletonExample {
 public class SingletonExample {
     private SingletonExample() {
     }
-
-    // 单例对象 volatile + 双重检测机制 -> 禁止指令重排
+    /**
+     * 单例对象 volatile + 双重检测机制 -> 禁止指令重排
+     */
     private volatile static SingletonExample instance = null;
 
     public static SingletonExample getInstance() {
@@ -101,9 +99,7 @@ public class SingletonExample {
 - 静态内部类
 
 > 延时加载
->
 > 只有真正调用getInstance()才会加载静态内部类
->
 > 兼备并发效率高和延时加载，推荐使用
 
 ```Java
@@ -111,11 +107,11 @@ public class SingletonExample {
     private SingletonExample() {}
     
     private static class SingletonInstance {
-        private static final SingletonExample instance = new SingletonExample();
+        private static final SingletonExample INSTANCE = new SingletonExample();
     }
     
     public static SingletonExample getInstance() {
-        return SingletonInstance.instance;
+        return SingletonInstance.INSTANCE;
     }
 }
 ```
@@ -123,7 +119,6 @@ public class SingletonExample {
 - 枚举
 
 > 实现简单，可以避免反射和反序列化的漏洞
->
 > 不能延时加载
 
 ```Java
@@ -141,8 +136,9 @@ public class SingletonExample {
         INSTANCE;
 
         private SingletonExample singleton;
-
-        // JVM保证这个方法绝对只调用一次
+        /**
+         * JVM保证这个方法绝对只调用一次
+         */
         Singleton() {
             singleton = new SingletonExample();
         }
