@@ -1,49 +1,9 @@
 # 单例模式
 
-- [懒汉式](src/lazy/SingletonExample.java)
+- 懒汉式
 
 > 线程安全，无需同步，调用效率高
 > 单例实例在类装载时进行创建，不能延时加载
-
-```Java
-@ThreadSafe
-public class SingletonExample {
-    private SingletonExample() {
-    }
-
-    private static SingletonExample instance = new SingletonExample();
-
-    public static SingletonExample getInstance() {
-        return instance;
-    }
-}
-```
-
-```Java
-@ThreadSafe
-public class SingletonExample {
-    private SingletonExample() {
-    }
-
-    private static SingletonExample instance = null;
-
-    static {
-        instance = new SingletonExample();
-    }
-
-    public static SingletonExample getInstance() {
-        return instance;
-    }
-}
-```
-
-
-
-- 饿汉式
-
-> 延时加载，资源利用率高
->
-> 每次获取实例都要同步，并发效率低
 
 ```Java
 @ThreadSafe
@@ -62,7 +22,25 @@ public class SingletonExample {
 }
 ```
 
+- 饿汉式
 
+> 延时加载，资源利用率高
+>
+> 每次获取实例都要同步，并发效率低
+
+```Java
+@ThreadSafe
+public class SingletonExample {
+    private SingletonExample() {
+    }
+
+    private static SingletonExample instance = new SingletonExample();
+
+    public static SingletonExample getInstance() {
+        return instance;
+    }
+}
+```
 
 - 双重检测锁
 
@@ -120,8 +98,6 @@ public class SingletonExample {
 }
 ```
 
-
-
 - 静态内部类
 
 > 延时加载
@@ -143,7 +119,6 @@ public class SingletonExample {
     }
 }
 ```
-
 
 - 枚举
 
