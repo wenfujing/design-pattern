@@ -6,7 +6,7 @@ Java常用设计模式的demo和笔记
 
 - 单例模式
 - 工厂模式
-- 抽象工厂模式
+- [抽象工厂模式](AbstractFactory/README.md)
 - 建造者模式
 - 原型模式
 
