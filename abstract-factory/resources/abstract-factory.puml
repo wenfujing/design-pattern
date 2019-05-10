@@ -17,21 +17,14 @@ class MacButton {
 class WinButton {
     + click(): void
 }
-class Application {
-    - MacButton
-    - WinButton
-}
 
-GUIFactory <|-- MacFactory
-GUIFactory <|-- WinFactory
+GUIFactory <|.. MacFactory :implement
+GUIFactory <|.. WinFactory :implement
 
-Button <|-- MacButton
-Button <|-- WinButton
+Button <|.. MacButton :implement
+Button <|.. WinButton :implement
 
-MacFactory *-- MacButton
-WinFactory *-- WinButton
-
-'application use factory'
-Application *-- GUIFactory
+MacFactory --> "generate" MacButton
+WinFactory --> WinButton :generate
 
 @enduml
