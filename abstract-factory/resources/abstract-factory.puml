@@ -1,0 +1,37 @@
+@startuml
+interface GUIFactory <<Interface>> {
+    # createButton(): Button
+}
+class MacFactory {
+    + createButton(): MacButton
+}
+class WinFactory {
+    + createButton(): WinButton
+}
+interface Button <<Interface>> {
+    # click(): void
+}
+class MacButton {
+    + click(): void
+}
+class WinButton {
+    + click(): void
+}
+class Application {
+    - MacButton
+    - WinButton
+}
+
+GUIFactory <|-- MacFactory
+GUIFactory <|-- WinFactory
+
+Button <|-- MacButton
+Button <|-- WinButton
+
+MacFactory *-- MacButton
+WinFactory *-- WinButton
+
+'application use factory'
+Application *-- GUIFactory
+
+@enduml
