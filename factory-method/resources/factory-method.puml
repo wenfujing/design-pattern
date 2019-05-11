@@ -1,0 +1,22 @@
+@startuml
+abstract Factory {
+    + create(): Product
+}
+class CarFactory extends Factory {
+    + create(): Car
+}
+class ComputerFactory extends Factory {
+    + create(): Computer
+}
+abstract Product {
+    + use(): void
+}
+class Car extends Product {
+    + use(): void
+}
+class Computer extends Product {
+    + use(): void
+}
+CarFactory <-- Car
+ComputerFactory <-- Computer
+@enduml

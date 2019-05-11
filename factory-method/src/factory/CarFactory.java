@@ -1,7 +1,6 @@
 package factory;
 
 import product.Car;
-import product.Product;
 
 /**
  * @author yuanweimin
@@ -10,7 +9,7 @@ import product.Product;
  */
 public class CarFactory extends Factory {
     @Override
-    public Product create() {
+    public Car create() {
         return new Car();
     }
 }

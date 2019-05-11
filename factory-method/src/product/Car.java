@@ -2,7 +2,7 @@ package product;
 
 /**
  * @author yuanweimin
- * @date 19/05/11 23:08
+ * @date 19/05/11 23:12
  * @description 
  */
 public class Car extends Product {

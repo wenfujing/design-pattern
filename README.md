@@ -5,7 +5,7 @@ Java常用设计模式的demo和笔记
 ### 创建型模式
 
 - [单例模式](singleton/README.md)
-- 工厂模式
+- [工厂方法模式](factory-method/README.md)
 - [抽象工厂模式](abstract-factory/README.md)
 - 建造者模式
 - 原型模式

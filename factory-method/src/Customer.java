@@ -1,13 +1,14 @@
 import factory.CarFactory;
 import factory.ComputerFactory;
-import product.Product;
+import product.Car;
+import product.Computer;
 
 public class Customer {
     public static void main(String[] args) {
-        Product car = new CarFactory().create();
+        Car car = new CarFactory().create();
         car.use();
 
-        Product computer = new ComputerFactory().create();
+        Computer computer = new ComputerFactory().create();
         computer.use();
     }
 }
