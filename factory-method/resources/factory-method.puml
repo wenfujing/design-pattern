@@ -1,22 +1,25 @@
 @startuml
-abstract Factory {
-    + create(): Product
+abstract class CPUFactory {
+    + createCPU(): CPU
 }
-class CarFactory extends Factory {
-    + create(): Car
+abstract class CPU {
+    + useCPU(): void
 }
-class ComputerFactory extends Factory {
-    + create(): Computer
+
+class AMDFactory extends CPUFactory {
+    + createCPU(): CPU
 }
-abstract Product {
-    + use(): void
+class InterFactory extends CPUFactory {
+    + createCPU(): CPU
 }
-class Car extends Product {
-    + use(): void
+
+class AMD extends CPU {
+    + useCPU(): void
 }
-class Computer extends Product {
-    + use(): void
+class Inter extends CPU {
+    + useCPU: void
 }
-CarFactory <-- Car
-ComputerFactory <-- Computer
+
+AMD <.. AMDFactory
+Inter <.. InterFactory
 @enduml

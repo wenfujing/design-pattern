@@ -3,7 +3,7 @@ package product;
 /**
  * @author yuanweimin
  * @date 19/05/13 09:21
- * @description 
+ * @description 电脑产品
  */
 public class Computer implements Product {
     @Override

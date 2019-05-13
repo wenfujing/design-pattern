@@ -1,19 +1,18 @@
-import factory.CarAbstractFactory;
-import factory.ComputerAbstractFactory;
-import product.Car;
-import product.Computer;
+import factory.AMDFactory;
+import factory.InterFactory;
+import product.CPU;
 
 /**
  * @author yuanweimin
- * @date 19/05/13 08:22
- * @description
+ * @date 19/05/13 09:59
+ * @description 
  */
 public class Customer {
     public static void main(String[] args) {
-        Car car = new CarAbstractFactory().create();
-        car.use();
+        CPU interCPU = new InterFactory().createCPU();
+        interCPU.useCPU();
 
-        Computer computer = new ComputerAbstractFactory().create();
-        computer.use();
+        CPU amdCPU = new AMDFactory().createCPU();
+        amdCPU.useCPU();
     }
 }
