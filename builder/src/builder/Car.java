@@ -5,6 +5,7 @@ package builder;
  * @date 19-5-13
  * @describe
  */
+@SuppressWarnings("ALL")
 public class Car {
     final String type;
     final String price;
@@ -14,6 +15,18 @@ public class Car {
         type = builder.type;
         price = builder.price;
         maxSpeed = builder.maxSpeed;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public String getMaxSpeed() {
+        return maxSpeed;
     }
 
     @Override

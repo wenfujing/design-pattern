@@ -1,12 +1,25 @@
 @startuml
-class User {
-    - name: String
-    - age: int
-    - phone: String
-    - address: String
+
+class ConcreteBuilder {
+    + buildPartA(): void
+    + buildPartB(): void
+    + buildPartC(): void
 }
 
-class UserBuilder {
-    + constructor(UserBuilder builder)
+abstract class Builder <<abstract>> {
+    + buildPartA(): void
+    + buildPartB(): void
+    + buildPartC(): void
 }
+
+class Director {
+    + construct()
+}
+
+class Product
+
+ConcreteBuilder ..> Product
+Director o-- Builder
+ConcreteBuilder <|-- Builder
+
 @enduml

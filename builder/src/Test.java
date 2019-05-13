@@ -14,6 +14,7 @@ public class Test {
                 .address("中国江西")
                 .build();
         System.out.println(user);
+        System.out.println(user.getAddress());
 
         Car car = new Car.Builder()
                 .type("宝马")

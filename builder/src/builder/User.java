@@ -5,6 +5,7 @@ package builder;
  * @date 19/05/13 08:41
  * @description 
  */
+@SuppressWarnings("ALL")
 public class User {
     private final String name;
     private final int age;
