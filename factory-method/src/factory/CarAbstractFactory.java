@@ -7,7 +7,7 @@ import product.Car;
  * @date 19/05/11 23:09
  * @description 
  */
-public class CarFactory extends Factory {
+public class CarAbstractFactory extends AbstractFactory {
     @Override
     public Car create() {
         return new Car();
