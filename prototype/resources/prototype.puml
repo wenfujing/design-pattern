@@ -1,0 +1,26 @@
+@startuml
+interface Prototype extends Cloneable {
+    + deepClone(): Object
+}
+
+class UserPrototype implements Prototype, Serializable {
+    - String name
+    - int age
+    - String sex
+    - Address address
+    ---
+    + getter() && setter()
+    + toString(): String
+    ---
+    + clone(): UserPrototype
+    + deepClone(): UserPrototype
+}
+
+class Address implements Serializable {
+    - String street
+    - String door
+    ---
+    + getter() && setter
+    + toString(): String
+}
+@enduml
