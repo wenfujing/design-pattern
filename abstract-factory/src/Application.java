@@ -1,21 +1,17 @@
-import factory.MacFactory;
-import factory.WinFactory;
-import product.MacButton;
-import product.WinButton;
+import factory.*;
+import product.*;
 
 /**
  * @author yuanweimin
- * @date 19/05/10 08:59
- * @description 抽象工厂模式
+ * @date 19/05/13 09:26
+ * @description 测试抽象工厂
  */
 public class Application {
     public static void main(String[] args) {
-        MacFactory macFactory = new MacFactory();
-        MacButton macButton = macFactory.createButton();
-        macButton.click();
+        Computer computer = new ComputerFactory().createProd();
+        computer.use();
 
-        WinFactory winFactory = new WinFactory();
-        WinButton winButton = winFactory.createButton();
-        winButton.click();
+        Mouse mouse = new MouseFactory().createProd();
+        mouse.use();
     }
 }
