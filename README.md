@@ -7,7 +7,7 @@ Java常用设计模式的demo和笔记
 - [单例模式](singleton/README.md)
 - [工厂方法模式](factory-method/README.md)
 - [抽象工厂模式](abstract-factory/README.md)
-- 建造者模式
+- [建造者模式](builder/README.md)
 - 原型模式
 
 ### 结构型模式
@@ -39,6 +39,7 @@ Java常用设计模式的demo和笔记
 
 ### 参考资料
 
+- [看懂UML类图](https://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html)
 - [资料汇总](https://www.cnblogs.com/foryang/p/5849402.html)
 - [图说设计模式](https://design-patterns.readthedocs.io/zh_CN/latest/index.html)
 - [Design patterns implemented in Java](https://java-design-patterns.com/)

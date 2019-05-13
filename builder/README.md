@@ -6,3 +6,5 @@
 
 > Builder模式的意图是把构造对象实例的代码逻辑移到要实例化的类的外部。
 
+### UML类图
+![builder](https://user-gold-cdn.xitu.io/2018/3/10/16210252f2f68109?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)

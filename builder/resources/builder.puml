@@ -1,0 +1,12 @@
+@startuml
+class User {
+    - name: String
+    - age: int
+    - phone: String
+    - address: String
+}
+
+class UserBuilder {
+    + constructor(UserBuilder builder)
+}
+@enduml

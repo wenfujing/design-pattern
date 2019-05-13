@@ -1,3 +1,4 @@
+import builder.Car;
 import builder.User;
 
 /**
@@ -13,5 +14,12 @@ public class Test {
                 .address("中国江西")
                 .build();
         System.out.println(user);
+
+        Car car = new Car.Builder()
+                .type("宝马")
+                .price("1000000")
+                .maxSpeed("360km/h")
+                .build();
+        System.out.println(car);
     }
 }
