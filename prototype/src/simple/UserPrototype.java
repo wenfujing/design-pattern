@@ -70,8 +70,8 @@ public class UserPrototype implements Prototype, Serializable {
     @Override
     public UserPrototype deepClone() {
         UserPrototype user = null;
-        ByteArrayOutputStream outByte = new ByteArrayOutputStream();
         try {
+            ByteArrayOutputStream outByte = new ByteArrayOutputStream();
             ObjectOutputStream output = new ObjectOutputStream(outByte);
             output.writeObject(this);
 
