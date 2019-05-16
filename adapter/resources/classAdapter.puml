@@ -1,0 +1,12 @@
+@startuml
+title 类适配器模式
+class Adaptee {
+    + specificRequest(): void
+}
+interface Target {
+    + request(): void
+}
+class Adapter extends Adaptee implements Target {
+    + request(): void
+}
+@enduml

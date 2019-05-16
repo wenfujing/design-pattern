@@ -8,7 +8,7 @@ Java常用设计模式的demo和笔记
 - [工厂方法模式](factory-method/README.md)
 - [抽象工厂模式](abstract-factory/README.md)
 - [建造者模式](builder/README.md)
-- 原型模式
+- [原型模式](prototype/README.md)
 
 ### 结构型模式
 
