@@ -1,0 +1,25 @@
+@startuml
+class ModuleA {
+    testA(): void
+}
+class ModuleB {
+    testB(): void
+}
+class ModuleC {
+    testC(): void
+}
+
+class Facade {
+    test(): void
+}
+
+class Client {
+    - Facade
+}
+
+Facade <.. ModuleA
+Facade <.. ModuleB
+Facade <.. ModuleC
+Client <.. Facade
+
+@enduml
